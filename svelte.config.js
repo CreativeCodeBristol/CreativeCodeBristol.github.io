@@ -1,6 +1,4 @@
-import { env } from '$env/dynamic/private';
-
-const base = env.BASE_PATH ?? '';
+const base = process.env.BASE_PATH ?? '';
 
 export default {
 	paths: {
