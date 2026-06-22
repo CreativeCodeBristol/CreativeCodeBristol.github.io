@@ -22,12 +22,14 @@
 		<a class="btn" href={resolve('/about')}>What is this?</a>
 		{#if sketch}
 			<p>
-				<em>{sketch.meta.title}</em>
-				{#if author}
-					by <a href={resolve('/people/[slug]', { slug: author.slug })}>{authorDisplay}</a>
-				{:else if sketch.meta.author}
-					by {sketch.meta.author}
-				{/if}
+				<em>
+					Banner: {sketch.meta.title}
+					{#if author}
+						by <a href={resolve('/people/[slug]', { slug: author.slug })}>{authorDisplay}</a>
+					{:else if sketch.meta.author}
+						by {sketch.meta.author}
+					{/if}
+				</em>
 			</p>
 		{/if}
 	</div>
@@ -63,13 +65,20 @@
 	}
 
 	.footer {
-		display: flex;
-		justify-content: space-between;
-		align-items: end;
+		display: block;
 	}
 
 	.footer p {
-		font-size: 0.8rem;
-		margin: 0;
+		font-size: 0.7rem;
+		margin: var(--space-4) 0 0;
+	}
+
+	@media (min-width: 500px) {
+		.footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: end;
+		}
 	}
 </style>

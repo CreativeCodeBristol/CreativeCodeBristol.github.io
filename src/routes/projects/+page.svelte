@@ -12,7 +12,6 @@
 <div class="container">
 	<header class="section-head no-border">
 		<h2>Projects</h2>
-		<span class="muted count">Things made at jams.</span>
 	</header>
 
 	{#if data.projects.length}
@@ -27,10 +26,6 @@
 </div>
 
 <style>
-	.count {
-		font-family: var(--font-mono);
-		font-size: 0.85rem;
-	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));

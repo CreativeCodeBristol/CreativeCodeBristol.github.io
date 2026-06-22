@@ -52,7 +52,7 @@
 		</p>
 
 		{#if next}
-			<h2 class="border-top">Next Jam</h2>
+			<h2 class="border-top">Next Event</h2>
 			<div class="next-wrap">
 				<NextEventCard event={next} hideDetailsButton />
 			</div>

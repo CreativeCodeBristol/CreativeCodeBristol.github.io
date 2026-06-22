@@ -9,7 +9,12 @@
 	let { data } = $props();
 
 	let sketch = $state<Sketch>();
+
+	let innerWidth = $state<number>();
+	const isMobile = $derived(innerWidth ? innerWidth <= 500 : false);
 </script>
+
+<svelte:window bind:innerWidth />
 
 <svelte:head>
 	<title>Creative Code Bristol</title>
@@ -25,8 +30,8 @@
 </section>
 
 <section class="container section">
-	<header class="section-head no-border">
-		<h2>Next jam</h2>
+	<header class={`section-head ${isMobile ? '' : 'no-border'}`}>
+		<h2>Next Event</h2>
 		<a class="see-all" href={resolve('/events')}>All events →</a>
 	</header>
 	{#if data.nextEvent}

@@ -11,7 +11,6 @@
 <div class="container">
 	<header class="section-head no-border">
 		<h2>Events</h2>
-		<span class="muted count">All past and upcoming jams.</span>
 	</header>
 
 	{#if data.upcoming.length}
@@ -47,10 +46,6 @@
 	}
 	.sub-past {
 		margin-top: var(--space-7);
-	}
-	.count {
-		font-family: var(--font-mono);
-		font-size: 0.85rem;
 	}
 	.grid {
 		display: grid;

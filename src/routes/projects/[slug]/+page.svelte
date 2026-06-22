@@ -38,4 +38,8 @@
 	.prose {
 		max-width: var(--max-w);
 	}
+
+	.prose video {
+		width: 100px;
+	}
 </style>
