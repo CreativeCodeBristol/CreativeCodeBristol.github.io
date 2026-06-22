@@ -22,7 +22,7 @@ jobs:
       - run: npm run check
       - run: npm run build
         env:
-          BASE_PATH: /bristol-creative-code
+          BASE_PATH: /creative-code-bristol
       - uses: actions/upload-pages-artifact@v3
         with:
           path: build
