@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { resolve } from '$app/paths';
 	import { getSketches, getPerson, getPersonDisplayName, type Sketch } from '$lib/content';
-	import P5 from 'p5';
+	import type P5 from 'p5';
 
 	let container: HTMLDivElement | undefined = $state();
 	let instance: P5 | undefined;
@@ -24,7 +24,8 @@
 		instance?.remove();
 		currentIdx = idx;
 		sketch = sketches[idx];
-		instance = new P5(sketch.sketch, container);
+		const { default: P5Ctor } = await import('p5');
+		instance = new P5Ctor(sketch.sketch, container);
 	}
 
 	onMount(() => setSketch(pickRandom()));
