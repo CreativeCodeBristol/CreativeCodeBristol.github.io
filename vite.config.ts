@@ -1,19 +1,10 @@
 import { mdsvex } from 'mdsvex';
+import rehypeRaw from 'rehype-raw';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-
-function getBasePath(): `/${string}` | undefined {
-	const envBase = process.env.BASE_PATH;
-
-	if (!envBase) return undefined;
-
-	if (envBase?.startsWith('/')) {
-		return envBase as `/${string}`;
-	}
-
-	return `/${envBase}`;
-}
+import { getBasePath } from './src/lib/utils/basePath';
+import resolveUrls from './src/lib/markdown/resolveUrls';
 
 export default defineConfig({
 	plugins: [
@@ -26,7 +17,9 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			adapter: adapter(),
-			preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
+			preprocess: [
+				mdsvex({ extensions: ['.svx', '.md'], rehypePlugins: [rehypeRaw, resolveUrls] })
+			],
 			extensions: ['.svelte', '.svx', '.md']
 		})
 	]

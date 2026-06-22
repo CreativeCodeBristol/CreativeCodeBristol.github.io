@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>{project.title} — Bristol Creative Code Jam</title>
+	<title>{project.title} — Creative Code Bristol</title>
 	{#if project.image}
 		<meta property="og:image" content={project.image} />
 	{/if}
@@ -24,12 +24,6 @@
 		<ContentMeta {event} authorSlug={project.author ?? null} tags={project.tags} />
 	</header>
 
-	{#if project.image}
-		<figure class="hero">
-			<img src={project.image} alt={project.title} />
-		</figure>
-	{/if}
-
 	<article class="prose">
 		<Component />
 	</article>
@@ -40,14 +34,6 @@
 		margin-bottom: var(--space-5);
 		padding-bottom: var(--space-4);
 		border-bottom: var(--border);
-	}
-	.hero {
-		margin: 0 0 var(--space-6);
-		border: var(--border);
-	}
-	.hero img {
-		width: 100%;
-		display: block;
 	}
 	.prose {
 		max-width: var(--max-w);

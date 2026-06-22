@@ -1,5 +1,6 @@
 import type { Component } from 'svelte';
 import type { ZodType } from 'zod';
+import { asset } from '$app/paths';
 import { eventSchema, personSchema, projectSchema } from './schemas';
 import type { Event, EventSummary, Person, Project, ProjectWithEvent } from './types';
 
@@ -14,6 +15,14 @@ type SketchModule = {
 	default?: unknown;
 	meta: SketchMeta;
 };
+
+const EXTERNAL = /^(https?:|mailto:|tel:|data:|#|\/\/)/;
+
+function resolveAssetUrl(url: string | undefined): string | undefined {
+	if (!url) return url;
+	if (EXTERNAL.test(url)) return url;
+	return asset(url as `/${string}`);
+}
 
 function deriveSlug(path: string): string {
 	const file = path.split('/').pop() ?? '';
@@ -60,8 +69,8 @@ export { isUpcoming };
 
 const events: Event[] = rawEvents;
 
-const people: Person[] = rawPeople;
-const projects: Project[] = rawProjects;
+const people: Person[] = rawPeople.map((p) => ({ ...p, avatar: resolveAssetUrl(p.avatar) }));
+const projects: Project[] = rawProjects.map((p) => ({ ...p, image: resolveAssetUrl(p.image) }));
 
 const eventSlugs = new Set(events.map((e) => e.slug));
 for (const project of projects) {

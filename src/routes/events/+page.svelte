@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Events — Bristol Creative Code Jam</title>
+	<title>Events — Creative Code Bristol</title>
 </svelte:head>
 
 <div class="container">

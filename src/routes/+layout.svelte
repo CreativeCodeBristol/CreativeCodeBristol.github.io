@@ -22,11 +22,8 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Bristol Creative Code Jam</title>
-	<meta
-		name="description"
-		content="Bristol Creative Code Jam — generative art, creative coding, and friendly nerds."
-	/>
+	<title>Creative Code Bristol</title>
+	<meta name="description" content="Creative Code Bristol." />
 </svelte:head>
 
 <div class="site">
@@ -76,7 +73,7 @@
 				<span>·</span>
 				<a
 					class="icon"
-					href="https://example.com"
+					href="https://github.com/cartmouse/creative-code-bristol"
 					rel="noopener noreferrer"
 					target="_blank"
 					aria-label="GitHub"

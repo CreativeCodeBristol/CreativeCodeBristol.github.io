@@ -31,7 +31,7 @@ export const personSchema = z.object({
 	name: z.string().min(1).optional(),
 	links: z.array(link).optional(),
 	pronouns: z.string().optional(),
-	avatar: z.string().url().optional(),
+	avatar: z.string().min(1).optional(),
 	roles: z.array(z.string()).optional(),
 	displayHandle: z.boolean().optional()
 });
@@ -41,6 +41,6 @@ export const projectSchema = z.object({
 	event: z.string().min(1),
 	author: z.string().nullable().optional(),
 	links: z.array(link).optional(),
-	image: z.string().url().optional(),
+	image: z.string().min(1).optional(),
 	tags: z.array(z.string()).optional()
 });

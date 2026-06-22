@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>About — Bristol Creative Code Jam</title>
+	<title>About — Creative Code Bristol</title>
 </svelte:head>
 
 <article class="container narrow">

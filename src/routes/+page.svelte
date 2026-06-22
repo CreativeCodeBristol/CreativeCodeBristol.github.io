@@ -9,7 +9,7 @@
 </script>
 
 <svelte:head>
-	<title>Bristol Creative Code Jam</title>
+	<title>Creative Code Bristol</title>
 </svelte:head>
 
 <section class="hero-section">

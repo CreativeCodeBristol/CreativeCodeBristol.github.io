@@ -23,7 +23,7 @@
 </script>
 
 <svelte:head>
-	<title>{displayName} — Bristol Creative Code Jam</title>
+	<title>{displayName} — Creative Code Bristol</title>
 </svelte:head>
 
 <div class="container">
