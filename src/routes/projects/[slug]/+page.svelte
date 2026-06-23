@@ -35,11 +35,4 @@
 		padding-bottom: var(--space-4);
 		border-bottom: var(--border);
 	}
-	.prose {
-		max-width: var(--max-w);
-	}
-
-	.prose video {
-		width: 100px;
-	}
 </style>

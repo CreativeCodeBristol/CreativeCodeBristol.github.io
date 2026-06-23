@@ -1,6 +1,6 @@
 <script lang="ts">
+	import EventCard from '$lib/components/EventCard.svelte';
 	import { getNextEvent } from '$lib/content';
-	import NextEventCard from '$lib/components/NextEventCard.svelte';
 
 	const next = getNextEvent();
 </script>
@@ -9,7 +9,7 @@
 	<title>About — Creative Code Bristol</title>
 </svelte:head>
 
-<article class="container narrow">
+<article class="container">
 	<header class="page-head">
 		<h1>About the jam</h1>
 	</header>
@@ -54,16 +54,13 @@
 		{#if next}
 			<h2 class="border-top">Next Event</h2>
 			<div class="next-wrap">
-				<NextEventCard event={next} hideDetailsButton />
+				<EventCard event={next} showNext hideDetails />
 			</div>
 		{/if}
 	</div>
 </article>
 
 <style>
-	.narrow {
-		max-width: var(--max-w);
-	}
 	.page-head {
 		margin-bottom: var(--space-5);
 		padding: var(--space-4) 0;

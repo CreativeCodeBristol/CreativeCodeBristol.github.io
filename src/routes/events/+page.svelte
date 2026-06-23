@@ -17,7 +17,7 @@
 		<h3 class="sub">Upcoming</h3>
 		<div class="grid">
 			{#each data.upcoming as event (event.slug)}
-				<EventCard {event} />
+				<EventCard {event} showNext hideDetails />
 			{/each}
 		</div>
 	{/if}

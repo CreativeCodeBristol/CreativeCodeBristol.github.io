@@ -22,7 +22,6 @@ const link = z.object({
 });
 
 export const eventSchema = z.object({
-	title: z.string().min(1),
 	date: isoDate,
 	rsvp: z.string().url().optional()
 });

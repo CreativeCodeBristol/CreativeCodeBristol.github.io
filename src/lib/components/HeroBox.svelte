@@ -8,7 +8,13 @@
 </script>
 
 <div class="hero-box">
-	<p class="kicker">Bristol · Pervasive Media Studio</p>
+	<p class="kicker">
+		Bristol · <a
+			href="https://www.watershed.co.uk/studio/"
+			target="_blank"
+			rel="noopener noreferrer">Pervasive Media Studio</a
+		>
+	</p>
 	<h1>Code & creativity</h1>
 	<div class="lede">
 		<p>

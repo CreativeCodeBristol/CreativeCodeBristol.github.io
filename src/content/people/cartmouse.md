@@ -2,6 +2,7 @@
 name: Tom Cartwright
 pronouns: he/him
 displayHandle: true
+avatar: https://cartmouse.com/assets/logos/logo-no-bg.png
 links:
   - label: Website
     url: https://cartmouse.com

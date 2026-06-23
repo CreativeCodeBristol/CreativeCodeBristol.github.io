@@ -1,7 +1,7 @@
 ---
 title: Mutating Creatures
 author: cartmouse
-event: june-26
+event: '6'
 tags: [Godot]
 image: '/assets/content/projects/mutating-creatures/mutating-creatures.jpg'
 ---

@@ -7,12 +7,6 @@
 	<title>Submit content — Creative Code Bristol</title>
 </svelte:head>
 
-<article class="container narrow prose">
+<article class="container prose">
 	<Component />
 </article>
-
-<style>
-	.narrow {
-		max-width: var(--max-w);
-	}
-</style>

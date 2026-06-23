@@ -67,7 +67,7 @@ function isUpcoming(event: Event): boolean {
 
 export { isUpcoming };
 
-const events: Event[] = rawEvents;
+const events: Event[] = rawEvents.map((e) => ({ ...e, title: `#${e.slug}` }));
 
 const people: Person[] = rawPeople.map((p) => ({ ...p, avatar: resolveAssetUrl(p.avatar) }));
 const projects: Project[] = rawProjects.map((p) => ({ ...p, image: resolveAssetUrl(p.image) }));
@@ -91,7 +91,7 @@ function byDateAsc<T extends { date: string }>(a: T, b: T): number {
 }
 
 function toEventSummary(event: Event): EventSummary {
-	return { slug: event.slug, title: event.title };
+	return { slug: event.slug, title: `#${event.slug}` };
 }
 
 function withEvent(project: Project): ProjectWithEvent {

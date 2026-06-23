@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
-	import NextEventCard from '$lib/components/NextEventCard.svelte';
 	import SketchCanvas from '$lib/components/SketchCanvas.svelte';
 	import HeroBox from '$lib/components/HeroBox.svelte';
 	import type { Sketch } from '$lib/content';
+	import EventCard from '$lib/components/EventCard.svelte';
 
 	let { data } = $props();
 
@@ -35,7 +35,7 @@
 		<a class="see-all" href={resolve('/events')}>All events →</a>
 	</header>
 	{#if data.nextEvent}
-		<NextEventCard event={data.nextEvent} />
+		<EventCard event={data.nextEvent} showNext />
 	{:else}
 		<p class="muted">
 			No upcoming jams scheduled yet. Watch this space, or <a href={resolve('/submit')}

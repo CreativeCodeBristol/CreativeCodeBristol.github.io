@@ -3,6 +3,7 @@ import type { z } from 'zod';
 import type { eventSchema, personSchema, projectSchema } from './schemas';
 
 export type Event = z.infer<typeof eventSchema> & {
+	title: string;
 	slug: string;
 	component: Component;
 };

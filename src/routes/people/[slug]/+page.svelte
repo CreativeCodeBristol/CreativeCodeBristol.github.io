@@ -126,9 +126,6 @@
 		font-family: var(--font-mono);
 		font-size: 0.9rem;
 	}
-	.prose {
-		max-width: var(--max-w);
-	}
 	.count {
 		font-family: var(--font-mono);
 		font-size: 0.85rem;
