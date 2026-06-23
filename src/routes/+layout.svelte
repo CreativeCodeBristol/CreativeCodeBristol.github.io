@@ -73,7 +73,7 @@
 				<span>·</span>
 				<a
 					class="icon"
-					href="https://github.com/cartmouse/creative-code-bristol"
+					href="https://github.com/CreativeCodeBristol/CreativeCodeBristol.github.io"
 					rel="noopener noreferrer"
 					target="_blank"
 					aria-label="GitHub"
